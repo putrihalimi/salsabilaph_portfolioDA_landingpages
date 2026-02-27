@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salsabila Putri Halimi | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div id="date-time">Memuat waktu...</div>
+        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+          <span class="mode-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+
+    <header class="profile">
+      <img src="Foto.jpg" alt="Salsabila Putri Halimi" class="profile-img" />
+      <h1>Salsabila Putri Halimi</h1>
+      <p class="role"><span id="typing"></span></p>
+
+      <div class="about-card">
+        <h2>About Me</h2>
+        <p>
+          A <strong>Data Science student at Universitas Terbuka (UT Bogor)</strong> focused on processing data to drive insight-based decision-making. Proficient in <strong>ETL</strong> processes and data visualization, transforming complex
+          datasets into relevant, actionable, and easy-to-understand information.
+        </p>
+      </div>
+
+      <nav class="social-links-minimalist">
+        <a href="https://github.com/putrihalimi" target="_blank">GitHub</a>
+        <span class="separator">•</span>
+        <a href="https://linkedin.com/in/salsabila-putri-halimi" target="_blank">LinkedIn</a>
+        <span class="separator">•</span>
+        <a href="https://wa.me/6283870847284?text=Halo%20Salsabila,%20saya%20tertarik%20dengan%20portfolio%20Anda" target="_blank">WhatsApp</a>
+        <span class="separator">•</span>
+        <a href="mailto:halimisalsabilaputrihalimi@gmail.com?subject=Portfolio%20Inquiry">Email</a>
+      </nav>
+
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <span>PostgreSQL</span>
+          <span>Power BI</span>
+          <span>Python</span>
+          <span>Excel</span>
+          <span>SQL Server</span>
+          <span>Looker Studio</span>
+          <span>Google Sheets</span>
+          <span>DBeaver</span>
+          <span>MariaDB (XAMPP)</span>
+          <span>HTML & CSS</span>
+          <span>Project Management</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="cv-section" class="cv-viewer">
+      <div class="container">
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <div class="cv-slider-wrapper">
+          <div class="cv-slider">
+            <img id="cv1" src="CV_Page1.jpg" alt="CV Page 1" class="cv-slide" />
+            <img id="cv2" src="CV_Page2.jpg" alt="CV Page 2" class="cv-slide" />
+            <img id="cv3" src="CV_Page3.jpg" alt="CV Page 3" class="cv-slide" />
+          </div>
+          <div class="cv-nav">
+            <a href="#cv1" class="cv-dot"></a>
+            <a href="#cv2" class="cv-dot"></a>
+            <a href="#cv3" class="cv-dot"></a>
+          </div>
+        </div>
+        <div class="cv-action">
+          <a href="File_CV_Salsabila.pdf" download class="btn-download">
+            <span>Download PDF Version</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="section-title">Data Analytics Portfolio</h2>
+        <div class="portfolio-grid">
+          <a href="https://github.com/putrihalimi/UTIP-CORRECTIVE-MONITORING-FRAMEWORK/tree/main" class="card" target="_blank">
+            <span class="badge excel">Excel</span>
+            <h3>UTIP Corrective Monitoring</h3>
+            <p class="subtitle">Developed a monitoring framework for UTIP corrective actions by processing data, flagging overdue findings, and generating structured reports.</p>
+            <p class="tech">Excel • Structured Tables • Powerpoint</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Business-Decision-Research/tree/main" class="card" target="_blank">
+            <span class="badge python">Python</span>
+            <h3>Business Decision Research</h3>
+            <p class="subtitle">Evaluated classification models using precision and recall metrics to support data-driven business decisions through cleaning and preprocessing.</p>
+            <p class="tech">Matplotlib • Sklearn • LogisticRegression</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Data-COVID-19-Indonesia/tree/main" class="card" target="_blank">
+            <span class="badge healthcare">Healthcare</span>
+            <h3>West Java COVID-19 Analysis</h3>
+            <p class="subtitle">Collected COVID-19 data via API/CSV, performing preprocessing and visualization to track healthcare trends and outcomes.</p>
+            <p class="tech">Python • Requests • Matplotlib</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAG_GdhlZ2I/qjYPYw8nAw_iiwYSCL2Ohg/edit" class="card" target="_blank">
+            <span class="badge bi">BI</span>
+            <h3>FMCG Transaction Analysis</h3>
+            <p class="subtitle">Optimized operational sales strategies by analyzing FMCG transaction patterns and distribution efficiency.</p>
+            <p class="tech">SQLite • Looker Studio • Excel</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAGTJFv_BS0/AfPEriPFgN_KBqudthjQJQ/edit" class="card" target="_blank">
+            <span class="badge sql">SQL</span>
+            <h3>CRM Customer Analytics</h3>
+            <p class="subtitle">Enhanced overall customer experience by analyzing relationship management data and behavior patterns.</p>
+            <p class="tech">JOIN • CTE • Window Functions</p>
+          </a>
+
+          <a href="https://lookerstudio.google.com/reporting/5dc632bb-d6d5-4f56-81c8-f0ff27512780" class="card" target="_blank">
+            <span class="badge bi">Looker</span>
+            <h3>Warmindo Sales Forecasting</h3>
+            <p class="subtitle">Identified total sales and revenue trends using time-series forecasting to predict future business performance.</p>
+            <p class="tech">Spreadsheet • Looker Studio • Visualization</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/AirBnB-Dashboard-Using-Power-BI/blob/main/README.md" class="card" target="_blank">
+            <span class="badge pbi">Power BI</span>
+            <h3>AirBnB Customer Performance</h3>
+            <p class="subtitle">Monitored BnB performance including revenue, occupancy rates, and other key hospitality insights.</p>
+            <p class="tech">Drill-down • ERD • Power BI</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Used-Car-Dealer-Using-Power-BI/blob/main/README.md" class="card" target="_blank">
+            <span class="badge pbi">Power BI</span>
+            <h3>Used Car Dealer Dashboard</h3>
+            <p class="subtitle">Tracked car inventory based on brand, type, price, and fuel consumption for better stock management.</p>
+            <p class="tech">Scatter Plot • Business Metrics • Power Query</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/HR-Analytics-Using-Power-BI/blob/main/README.md" class="card" target="_blank">
+            <span class="badge pbi">Power BI</span>
+            <h3>HR Analytics Dashboard</h3>
+            <p class="subtitle">Monitored recruitment efficiency, employee retention, and overall workforce status for HR optimization.</p>
+            <p class="tech">HR Metrics • Visualization • Dashboards</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAHAc_Hg8DY/U8w26NVr83rgTEwQC8JY4Q/edit" class="card" target="_blank">
+            <span class="badge sql">SQL</span>
+            <h3>UK Online Retail Analysis</h3>
+            <p class="subtitle">Analyzed sales frequency, transactions, and geography to identify popular products in the UK market.</p>
+            <p class="tech">PostgreSQL • SELECT • Queries</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAGTJVdr53o/Arlqs91uWLjgHttZxxyzEQ/edit" class="card" target="_blank">
+            <span class="badge sql">SQL</span>
+            <h3>Library Management System</h3>
+            <p class="subtitle">Managed library data including book loans, categories, and fine transaction records using SQL.</p>
+            <p class="tech">Data Governance • Group By • SQL</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Coffee-Sales-Using-SQL" class="card" target="_blank">
+            <span class="badge sql">SQL</span>
+            <h3>Coffee Sales Monitoring</h3>
+            <p class="subtitle">Tracked sales patterns and transaction trends over specific periods to optimize coffee shop operations.</p>
+            <p class="tech">DBeaver • WHERE • Order By</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Orders-Distribution-Using-Google-Studio/blob/main/README.md" class="card" target="_blank">
+            <span class="badge bi">Looker</span>
+            <h3>Shipping Order Analytics</h3>
+            <p class="subtitle">Monitored order distribution and shipping routes to improve logistics and delivery efficiency.</p>
+            <p class="tech">Visualization • Filters • Looker Studio</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Device-Feature-Analyst-Using-Google-Studio/blob/main/README.md" class="card" target="_blank">
+            <span class="badge bi">Looker</span>
+            <h3>Mobile Device Analytics</h3>
+            <p class="subtitle">Created a price and specification comparison dashboard to support consumer purchasing decisions.</p>
+            <p class="tech">Visualization • Filters • Looker Studio</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Logistic-Dashboard-using-Google-Studio/blob/main/README.md" class="card" target="_blank">
+            <span class="badge bi">Looker</span>
+            <h3>USA Logistic Dashboard</h3>
+            <p class="subtitle">Visualized logistics data across the US to optimize shipping locations and delivery times.</p>
+            <p class="tech">Logistics Visualization • Looker Studio</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Training-Sales-Using-Excel/blob/main/README.md" class="card" target="_blank">
+            <span class="badge excel">Excel</span>
+            <h3>Training Class Analysis</h3>
+            <p class="subtitle">Identified best-selling training types and effective locations to optimize corporate training strategies.</p>
+            <p class="tech">Excel • Pivot Tables • Charts</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Distribution-Sales-Using-Excel/blob/main/README.md" class="card" target="_blank">
+            <span class="badge excel">Excel</span>
+            <h3>Inventory & Shipping Dashboard</h3>
+            <p class="subtitle">Real-time tracking of delivery status, revenue, and warehouse stock levels for logistics optimization.</p>
+            <p class="tech">Excel • Pivot • Slicers</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Telcommunication-Customers-Churn" class="card" target="_blank">
+            <span class="badge python">Python</span>
+            <h3>Telecom Customer Churn</h3>
+            <p class="subtitle">Analyzed churn rates and customer segments to improve retention strategies and reduce loss.</p>
+            <p class="tech">Jupyter • Stat Analysis • Outliers</p>
+          </a>
+
+          <a href="https://docs.google.com/presentation/d/1WZfXzu7oLnT_q9hoSmZjlt9HCls1Ooch/edit" class="card" target="_blank">
+            <span class="badge bi">Team</span>
+            <h3>NHTSA Crash Analysis</h3>
+            <p class="subtitle">Collaborative project analyzing accident data factors to provide safety insights and recommendations.</p>
+            <p class="tech">Teamwork • Data Viz • Presentation</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAGzNrVSaFY/edit" class="card" target="_blank">
+            <span class="badge bi">PYTHON</span>
+            <h3>Pizza Happiness Sales</h3>
+            <p class="subtitle">Tracked inventory and pricing while performing customer segmentation for the F&B industry.</p>
+            <p class="tech">Data Cleaning • Standardization • F&B</p>
+          </a>
+
+          <a href="https://github.com/putrihalimi/Apify-Tiktok-Scraper-Using-Python" class="card" target="_blank">
+            <span class="badge python">Python</span>
+            <h3>TikTok Content Performance</h3>
+            <p class="subtitle">Analyzed engagement factors using regression and clustering to uncover non-linear content patterns.</p>
+            <p class="tech">API • Machine Learning • Scraping</p>
+          </a>
+
+          <a href="https://docs.google.com/document/d/1GctaWJawkpvEM5Oy2X755gMt9AAtWERx/edit" class="card" target="_blank">
+            <span class="badge bi">F&B Analyst</span>
+            <h3>Kitchen Cloud (Foodstory)</h3>
+            <p class="subtitle">Team project optimizing menu engineering and pricing strategies to enhance procurement efficiency.</p>
+            <p class="tech">Team Collaboration • Strategic Insights</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAG0hJd8kVk/edit" class="card" target="_blank">
+            <span class="badge healthcare">Healthcare</span>
+            <h3>Public Health Center Analysis</h3>
+            <p class="subtitle">Evaluated operational performance of community health centers to optimize patient care and resources.</p>
+            <p class="tech">Data Governance • ERD Modeling • QA</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAG_WzH4YCY/edit" class="card" target="_blank">
+            <span class="badge aviation">Aviation</span>
+            <h3>Flight Performance Analysis</h3>
+            <p class="subtitle">Analyzed flight tracking, pricing trends, and passenger segmentation to optimize operational efficiency.</p>
+            <p class="tech">SQL Joins • Data Cleaning • ERD</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAHAhgyvxnI/AbH4Q77zYmo2NQ-1u9GBMw/edit?utm_content=DAHAhgyvxnI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card" target="_blank">
+            <span class="badge sql">SQL</span>
+            <h3>E-commerce Business Performance Analysis</h3>
+            <p class="subtitle">Analyzed purchase distribution patterns and transaction trends. Implemented RFM segmentation and key performance indicators (KPIs) to evaluate customer value and sales growth.</p>
+            <p class="tech">SQL • DBeaver • RFM Analysis • Business KPIs</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAHAc_Hg8DY/U8w26NVr83rgTEwQC8JY4Q/edit?utm_content=DAHAc_Hg8DY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card" target="_blank">
+            <span class="badge sql">SQL</span>
+            <h3>UK Online Retail Analysis</h3>
+            <p class="subtitle">An exploratory data analysis of e-commerce transactions to identify sales trends, customer geographic distribution, and top-performing product categories.</p>
+            <p class="tech">PostgreSQL • Advanced SQL Queries • Trend Analysis</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAHCVRc3Tg0/CDpmhJ4pq8OFFaCKWARZkQ/edit?utm_content=DAHCVRc3Tg0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card" target="_blank">
+            <span class="badge marketing">Marketing</span>
+            <h3>Marketing & E-commerce Performance Analysis</h3>
+            <p class="subtitle">Leveraged SQL to analyze 100k+ transactions and digital events, identifying key bottlenecks in the marketing funnel to drive conversion rate optimization.</p>
+            <p class="tech">Advanced SQL • DBeaver • Funnel Analysis • Data Cleaning</p>
+          </a>
+
+          <a href="https://docs.google.com/spreadsheets/d/1x9Xqi_PzJSKLvj8TrOXsAANarJuMkRdv/edit?usp=sharing&ouid=100814172058925768459&rtpof=true&sd=true" class="card" target="_blank">
+            <span class="badge excel">Google Sheets</span>
+            <h3>Post-Covid19 Transaction Analysis</h3>
+            <p class="subtitle">Analyzed the shift in consumer behavior during the 2020 New Normal era, comparing online vs. offline transaction frequencies to identify emerging market trends.</p>
+            <p class="tech">Pivot Tables • Google Sheets • Data Visualization</p>
+          </a>
+
+          <a href="https://drive.google.com/drive/folders/1i8mYMAWIKusGlkNBw_a-V3J65wShFxsh?usp=drive_link" class="card" target="_blank">
+            <span class="badge python">Python</span>
+            <h3>Python Mastery: Logic & Automation</h3>
+            <p class="subtitle">Developed automated workflows and data processing scripts by implementing advanced programming logic, efficient loops, and modular function structures.</p>
+            <p class="tech">Python • Control Flow • Automation • Functional Programming</p>
+          </a>
+
+          <a href="https://www.canva.com/design/DAGhGmulhdg/GnkWGIGw2KFJ0vUqMniJpw/edit?utm_content=DAGhGmulhdg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="card" target="_blank">
+            <span class="badge sql">NoSQL</span>
+            <h3>NoSQL Database Fundamentals</h3>
+            <p class="subtitle">A series of academic projects implementing various non-relational database architectures, including data modeling and storage optimization.</p>
+            <p class="tech">Key-Value • Document Store • Column-Family</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+      <div class="container">
+        <h2 class="section-title">Certifications & Awards</h2>
+        <div class="cert-grid">
+          <div class="cert-item">
+            <div class="cert-img-wrapper">
+              <img src="sertifikat-sql.jpg" alt="SQL Certificate" onclick="window.open(this.src)" />
+            </div>
+            <div class="cert-info">
+              <h4>SQL for Data Analytics</h4>
+              <p>Issued by: Tutormy</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-img-wrapper">
+              <img src="sertifikat-python.jpg" alt="Python Certificate" onclick="window.open(this.src)" />
+            </div>
+            <div class="cert-info">
+              <h4>Python: Basic Data Science</h4>
+              <p>Issued by: Generation Girl</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-img-wrapper">
+              <img src="sertifikat-looker.jpg" alt="Looker Certificate" onclick="window.open(this.src)" />
+            </div>
+            <div class="cert-info">
+              <h4>Data Visualization with Google Studio</h4>
+              <p>Issued by: Ngulik Data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      // 1. Efek Mengetik
+      const texts = ["Data Analyst", "Business Intelligence", "Marketing Analyst", "Data Visualization Specialist"];
+      let count = 0;
+      let index = 0;
+
+      function typeEffect() {
+        const currentText = texts[count];
+        const typingElement = document.getElementById("typing");
+        if (typingElement) {
+          typingElement.textContent = currentText.slice(0, ++index);
+          if (index === currentText.length) {
+            setTimeout(() => {
+              index = 0;
+              count = (count + 1) % texts.length;
+            }, 2000);
+          } else {
+            setTimeout(typeEffect, 100);
+          }
+        }
+      }
+      typeEffect();
+
+      // 2. Update Waktu
+      function updateTime() {
+        const now = new Date();
+        const options = {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        };
+        const timeString = `Bogor | ${now.toLocaleDateString("id-ID", options)}`;
+        document.getElementById("date-time").textContent = timeString;
+      }
+      setInterval(updateTime, 1000);
+      updateTime();
+
+      // 3. Logika Dark Mode (DIPERBAIKI)
+      const btn = document.getElementById("dark-mode-toggle");
+      const icon = btn.querySelector(".mode-icon");
+
+      function setDarkMode(isDark) {
+        if (isDark) {
+          document.body.classList.add("dark-mode");
+          icon.textContent = "☀️";
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.body.classList.remove("dark-mode");
+          icon.textContent = "🌙";
+          localStorage.setItem("theme", "light");
+        }
+      }
+
+      btn.addEventListener("click", () => {
+        const isCurrentlyDark = document.body.classList.contains("dark-mode");
+        setDarkMode(!isCurrentlyDark);
+      });
+
+      // Cek tema saat pertama kali load
+      if (localStorage.getItem("theme") === "dark") {
+        setDarkMode(true);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+/* --- Global Styles --- */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #64748b;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #475569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cari bagian body di atas, pastikan seperti ini */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color); /* Pastikan pakai var ini */
+  color: var(--text-main);
+  line-height: 1.6;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Tambahkan ini agar halus */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Header & Profile --- */
+header.profile {
+  text-align: center;
+  padding: 60px 20px;
+  /* Gunakan variabel supaya otomatis berubah saat dark mode */
+  background: linear-gradient(to bottom, var(--card-bg), var(--bg-color));
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.role {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  height: 30px; /* Jaga stabilitas saat typing effect */
+}
+
+/* --- Variabel untuk Dark Mode --- */
+body.dark-mode {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --primary-color: #38bdf8; /* Warna biru yang lebih terang agar kontras */
+  --border-color: #334155;
+}
+
+/* Pastikan elemen-elemen ini ikut berubah warnanya */
+body.dark-mode header.profile {
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+body.dark-mode .card,
+body.dark-mode .about-card,
+body.dark-mode .cert-item,
+body.dark-mode .marquee-container {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: var(--text-main);
+}
+
+body.dark-mode .subtitle {
+  color: var(--text-muted);
+}
+
+/* --- Styling Top Bar --- */
+.top-bar {
+  background: var(--card-bg);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+/* Penyesuaian saat Dark Mode aktif */
+body.dark-mode .top-bar {
+  border-bottom-color: var(--border-color);
+  background: var(--card-bg);
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dark-mode-toggle {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background: #334155;
+  border-color: var(--border-color);
+}
+
+/* --- About Card --- */
+.about-card {
+  max-width: 700px;
+  margin: 30px auto;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.about-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* --- Social Links --- */
+.social-links-minimalist {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-links-minimalist a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.social-links-minimalist a:hover {
+  opacity: 0.7;
+}
+
+.separator {
+  color: #cbd5e1;
+}
+
+/* --- Marquee (Skill Scrolling) --- */
+.marquee-container {
+  overflow: hidden;
+  background: white;
+  padding: 15px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  margin: 40px 0;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-content span {
+  padding: 0 30px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- CV Slider --- */
+.cv-viewer {
+  padding: 60px 0;
+}
+
+.cv-slider-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.cv-slider {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.cv-slider::-webkit-scrollbar {
+  display: none;
+} /* Chrome/Safari */
+
+.cv-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.cv-nav {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cv-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background 0.3s;
+}
+
+.cv-dot:hover {
+  background: var(--primary-color);
+}
+
+.cv-action {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-download {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Portfolio Grid --- */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Badge Colors */
+.badge.excel {
+  background: #dcfce7;
+  color: #166534;
+}
+.badge.python {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.badge.sql {
+  background: #fef3c7;
+  color: #92400e;
+}
+.badge.bi,
+.badge.pbi {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+.badge.healthcare {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.badge.aviation {
+  background: #e0f2fe;
+  color: #075985;
+}
+.badge.marketing {
+  background: #ffd700;
+  color: #ffffff;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.tech {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+}
+
+/* --- Certificates --- */
+.certificates {
+  padding: 80px 0;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.cert-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cert-img-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.cert-info {
+  padding: 20px;
+}
+.cert-info h4 {
+  margin-bottom: 5px;
+}
+.cert-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
