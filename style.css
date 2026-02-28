@@ -143,6 +143,22 @@ body.dark-mode #dark-mode-toggle {
   border-color: var(--border-color);
 }
 
+.visitor-count {
+  font-size: 0.8rem;
+  background: var(--bg-color);
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Penyesuaian agar tidak terlalu penuh di layar kecil */
+@media (max-width: 480px) {
+  #date-time { display: none; } /* Sembunyikan waktu di HP kecil, fokus ke views */
+}
+
 /* --- About Card --- */
 .about-card {
   max-width: 700px;
