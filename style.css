@@ -117,19 +117,6 @@ body.dark-mode .subtitle {
   transition: background 0.3s ease;
 }
 
-.looker-stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px; /* Batasi tinggi agar tidak merusak top bar */
-  overflow: hidden;
-}
-
-.looker-stats iframe {
-  transform: scale(0.8); /* Perkecil sedikit jika terlalu besar */
-  pointer-events: none; /* Agar tidak bisa diklik secara tidak sengaja */
-}
-
 /* Penyesuaian saat Dark Mode aktif */
 body.dark-mode .top-bar {
   border-bottom-color: var(--border-color);
