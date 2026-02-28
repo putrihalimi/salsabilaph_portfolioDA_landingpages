@@ -43,3 +43,27 @@ if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
   icon.textContent = "☀️";
 }
+
+const searchInput = document.getElementById('project-search');
+const cards = document.querySelectorAll('.card');
+
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    
+    // 1. Logika Filter Tampilan Proyek
+    cards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        const tech = card.querySelector('.tech').innerText.toLowerCase();
+        
+        if (title.includes(searchTerm) || tech.includes(searchTerm)) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    // 2. Update URL untuk GA4 (Parameter q)
+    // Ini yang akan ditangkap oleh "Penelusuran Situs" di gambar Anda
+    const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + encodeURIComponent(searchTerm);
+    window.history.replaceState({path:newurl}, '', newurl);
+});
