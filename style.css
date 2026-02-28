@@ -217,6 +217,23 @@ body.dark-mode #dark-mode-toggle {
 }
 
 /* --- Marquee (Skill Scrolling) --- */
+
+/* Kurangi padding pada header profil agar tidak terlalu memakan tempat */
+header.profile {
+  padding: 40px 20px 10px 20px; /* Atas 40px, bawah hanya 10px */
+}
+
+/* Kurangi margin pada marquee skill */
+.marquee-container {
+  margin: 10px 0 20px 0; /* Jarak bawah dikurangi jadi 20px */
+}
+
+/* Hilangkan margin berlebih pada judul CV */
+.cv-viewer .section-title {
+  margin-top: 0; 
+  padding-top: 0;
+}
+
 .marquee-container {
   overflow: hidden;
   background: white;
