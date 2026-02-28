@@ -67,3 +67,20 @@ searchInput.addEventListener('input', (e) => {
     const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?q=' + encodeURIComponent(searchTerm);
     window.history.replaceState({path:newurl}, '', newurl);
 });
+
+// Copy dan paste kode ini di bagian paling bawah script Anda
+const downloadBtn = document.getElementById('download-cv');
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', function() {
+        // Logika agar klik Anda (owner) tidak terhitung jika ada parameter ?admin=true
+        if (localStorage.getItem('is_owner') !== 'true') {
+            gtag('event', 'generate_lead', {
+                'event_category': 'Engagement',
+                'event_label': 'Download CV PDF',
+                'file_name': 'File_CV_Salsabila.pdf',
+                'value': 1.0 
+            });
+            console.log('Insight: Seseorang baru saja mendownload CV Anda!');
+        }
+    });
+}
