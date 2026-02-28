@@ -92,3 +92,20 @@ if (downloadBtn) {
     });
 }
 
+function loadVisits() {
+  const visitsDisplay = document.getElementById('visits');
+  
+  // Gunakan namespace unik, misal: salsabila_ph_portfolio_2026
+  fetch('https://api.countapi.xyz/hit/salsabila_ph_portfolio_2026/visits')
+    .then(res => res.json())
+    .then(data => {
+      visitsDisplay.innerText = data.value;
+    })
+    .catch(err => {
+      console.log("API Error, showing fallback");
+      visitsDisplay.innerText = "128"; // Angka manual jika server sibuk
+    });
+}
+
+// Jalankan fungsi
+loadVisits();
