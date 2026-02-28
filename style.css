@@ -457,3 +457,18 @@ body.dark-mode #dark-mode-toggle {
     grid-template-columns: 1fr;
   }
 }
+
+.cv-embed-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cv-embed-container iframe {
+    height: 400px; /* Lebih pendek untuk layar HP */
+  }
+}
