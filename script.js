@@ -1,3 +1,10 @@
+// Tambahkan di baris paling atas script
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('admin') === 'true') {
+    localStorage.setItem('is_owner', 'true');
+    console.log("Mode Admin Aktif: Aktivitas Anda tidak akan dilacak.");
+}
+
 // --- Fungsi Waktu & Lokasi ---
 function updateDateTime() {
   const now = new Date();
@@ -84,3 +91,4 @@ if (downloadBtn) {
         }
     });
 }
+
