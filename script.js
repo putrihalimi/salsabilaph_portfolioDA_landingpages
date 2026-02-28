@@ -109,3 +109,20 @@ function loadVisits() {
 
 // Jalankan fungsi
 loadVisits();
+
+function loadVisits() {
+  const visitsDisplay = document.getElementById('visits');
+  
+  // Menggunakan CounterAPI yang lebih stabil
+  fetch('https://api.counterapi.dev/v1/salsabila-ph-2026/visits/up')
+    .then(res => res.json())
+    .then(data => {
+      // API ini mengembalikan properti 'count'
+      visitsDisplay.innerText = data.count || "0";
+    })
+    .catch(err => {
+      console.log("API Error, fallback aktif");
+      visitsDisplay.innerText = "17"; // Angka dari GA4 Anda
+    });
+}
+loadVisits();
