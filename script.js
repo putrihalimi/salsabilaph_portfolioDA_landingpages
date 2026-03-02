@@ -27,6 +27,34 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 updateDateTime();
 
+// Tambahkan fungsi ini di script.js
+function loadWeather() {
+  const tempDisplay = document.getElementById('weather-temp');
+  const iconDisplay = document.getElementById('weather-icon');
+
+  // Koordinat Bogor (Sesuai lokasi Anda)
+  const lat = -6.5944;
+  const lon = 106.7892;
+
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
+    .then(res => res.json())
+    .then(data => {
+      const temp = Math.round(data.current_weather.temperature);
+      tempDisplay.innerText = `${temp}°C Bogor`;
+      
+      // Logika sederhana ganti ikon berdasarkan suhu
+      if (temp > 30) iconDisplay.innerText = "☀️";
+      else if (temp < 25) iconDisplay.innerText = "🌧️";
+      else iconDisplay.innerText = "⛅";
+    })
+    .catch(err => {
+      tempDisplay.innerText = "Cuaca tidak tersedia";
+    });
+}
+
+// Panggil fungsi saat halaman dimuat
+loadWeather();
+
 // --- Fungsi Dark Mode ---
 const toggleBtn = document.getElementById("dark-mode-toggle");
 const body = document.body;
@@ -126,3 +154,4 @@ function loadVisits() {
     });
 }
 loadVisits();
+
