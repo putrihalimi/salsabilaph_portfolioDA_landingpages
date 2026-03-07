@@ -521,3 +521,32 @@ header.profile {
     height: 400px; /* Lebih pendek untuk layar HP */
   }
 }
+
+/* Tampilan Standar (Laptop/Desktop) */
+.portfolio-grid {
+    display: grid;
+    grid-template-rows: repeat(3, auto); /* 3 Baris */
+    grid-auto-flow: column;
+    grid-auto-columns: calc(33.33% - 14px); /* 3 Kolom */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Tampilan Khusus HP (Mobile) */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        /* Di HP lebih baik 2 baris agar kartu tidak terlalu kecil */
+        grid-template-rows: repeat(2, auto); 
+        /* Di HP 1.2 kolom agar pengunjung tahu ada kartu di sebelah kanan yang bisa digeser */
+        grid-auto-columns: calc(85% - 10px); 
+        gap: 15px;
+        padding-left: 15px; /* Memberi ruang di pinggir layar */
+    }
+    
+    .portfolio-grid .card {
+        min-height: 150px;
+    }
+}
