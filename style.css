@@ -174,6 +174,38 @@ body.dark-mode #dark-mode-toggle {
   margin-bottom: 15px;
 }
 
+.portfolio-grid {
+    display: grid;
+    /* Mengunci 3 baris dengan tinggi otomatis */
+    grid-template-rows: repeat(3, auto); 
+    /* Memaksa kartu baru mengisi kolom ke samping (horizontal) */
+    grid-auto-flow: column;
+    /* Menentukan lebar tiap kolom (3 kolom terlihat sekaligus) */
+    grid-auto-columns: calc(33.33% - 14px); 
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.portfolio-grid .card {
+    /* Memastikan kartu berhenti tepat di layar saat digeser */
+    scroll-snap-align: start; 
+    width: 100%;
+    /* Menjaga rasio kartu agar tetap seragam */
+    min-height: 180px; 
+}
+
+/* Mempercantik Scrollbar agar senada dengan tema Data Analyst Anda */
+.portfolio-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.portfolio-grid::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
 /* Pengaturan posisi Scorecard di Top Bar */
 .looker-stats {
   margin-top: 8px;      /* Jarak atas 8px */
